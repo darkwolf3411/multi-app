@@ -1,3 +1,11 @@
+# О приложении
+
+Данное веб приложение создано на стеке React\Redux и включает в себя несколько мини приложений такие как:
+
+1.ToDo приложение
+2.Просмотр погоды
+3.Генератор паролей
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
