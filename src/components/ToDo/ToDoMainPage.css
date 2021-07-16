@@ -1,0 +1,180 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 98vh;
+  overflow: hidden;
+  font-size: 1.5rem;
+  background-color: #222222;
+  color: white;
+}
+
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #9138aa #ffffff;
+}
+
+*::-webkit-scrollbar {
+  width: 11px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #222222;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #8f54a0;
+  border-radius: 36px;
+  border: 3px solid #222222;
+}
+
+.ToDo-Wrapper {
+  display: grid;
+  grid-template-columns: 620px 70px;
+  grid-gap: 20px;
+}
+
+.ToDo-Wrapper button {
+  display: inline-block;
+  background-color: unset;
+  padding: 15px;
+  border: 3px solid #ffffff;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.2s;
+  animation: bn13bouncy 5s infinite linear;
+  position: relative;
+}
+
+.ToDo-Wrapper button:hover {
+  background-color: white;
+  color: #000000;
+}
+.sub-todo-list-button{
+  width: 150px;
+  animation: unset;
+}
+.sub-todo-list-button:active{
+  background-color: #0075ff;
+}
+@keyframes bn13bouncy {
+  0% {
+    top: 0em;
+  }
+
+  40% {
+    top: 0em;
+  }
+
+  43% {
+    top: -0.9em;
+  }
+
+  46% {
+    top: 0em;
+  }
+
+  48% {
+    top: -0.4em;
+  }
+
+  50% {
+    top: 0em;
+  }
+
+  100% {
+    top: 0em;
+  }
+}
+
+.todo-list {
+  max-height: 521px;
+  overflow-y: scroll;
+  display: grid;
+  grid-column: 1/3;
+  grid-row-gap: 20px;
+}
+
+.item {
+  cursor: default;
+  border: 1px solid white;
+  border-radius: 0.12em;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 595px 30px 30px;
+  text-align: start;
+  align-items: center;
+}
+.item-enter {
+  opacity: 0;
+}
+.item-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.item-exit {
+  opacity: 1;
+}
+.item-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+}
+.item span {
+  max-width: 545px;
+}
+
+.DoElSpan {
+  text-decoration: unset;
+}
+
+.DoElSpan__isReady {
+  text-decoration: line-through;
+}
+
+.doEl__buttons-wrapper {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.doEl__buttons-wrapper img {
+  cursor: pointer;
+  width: 20px;
+}
+
+.chekDoEl {
+  cursor: pointer;
+  width: 25px;
+  transform: scale(1.5);
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0px;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+  color: rgba(255, 255, 255, 0.233);
+}
+
+.form__field:placeholder-shown~.form__field {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
